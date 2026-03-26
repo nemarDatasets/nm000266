@@ -1,0 +1,197 @@
+_dataset:
+  class: Sosulski2019
+  code: Sosulski2019
+  doi: 10.6094/UNIFR/154576
+  interval:
+  - -0.2
+  - 1
+  n_subjects: 13
+  paradigm: p300
+abstract: The decoding of brain signals recorded via, e.g., an electroencephalogram, using machine learning is key to brain-computer
+  interfaces (BCIs). Stimulation parameters or other experimental settings of the BCI protocol typically are chosen according
+  to the literature. The decoding performance directly depends on the choice of parameters, as they influence the elicited
+  brain signals and optimal parameters are subject-dependent. Thus a fast and automated selection procedure for experimental
+  parameters could greatly improve the usability of BCIs. We evaluate a standalone random search and a combined Bayesian optimization
+  with random search into a closed-loop auditory event-related potential protocol. We aimed at finding the individually best
+  stimulation speed—also known as stimulus onset asynchrony (SOA)—that maximizes the classification performance of a regularized
+  linear discriminant analysis.
+acquisition:
+  auxiliary_channels:
+    eog_channels: 1
+    eog_type:
+    - vertical
+    has_eog: true
+  channel_types:
+    eeg: 31
+    eog: 1
+    misc: 5
+  hardware: BrainProducts BrainAmp DC
+  line_freq: 50.0
+  montage: standard_1020
+  n_channels: 31
+  reference: nose
+  sampling_rate: 1000.0
+  sensor_type: passive Ag/AgCl
+  sensors:
+  - C3
+  - C4
+  - CP1
+  - CP2
+  - CP5
+  - CP6
+  - Cz
+  - EOGvu
+  - F10
+  - F3
+  - F4
+  - F7
+  - F8
+  - F9
+  - FC1
+  - FC2
+  - FC5
+  - FC6
+  - Fp1
+  - Fp2
+  - Fz
+  - O1
+  - O2
+  - P10
+  - P3
+  - P4
+  - P7
+  - P8
+  - P9
+  - Pz
+  - T7
+  - T8
+  - x_EMGl
+  - x_GSR
+  - x_Optic
+  - x_Pulse
+  - x_Respi
+bci_application:
+  applications:
+  - communication
+cross_validation:
+  cv_folds: 13
+  cv_method: 13-fold
+  evaluation_type:
+  - within_session
+data_structure:
+  n_trials: 'Variable: optimization part used time-limited trials (20 minutes per strategy), validation part used 20 trials
+    per SOA'
+  n_trials_per_class:
+    non_target: 65 per trial (after preprocessing, originally 75)
+    target: 13 per trial (after preprocessing, originally 15)
+  trials_context: 'Each trial consisted of 90 stimuli (15 target, 75 non-target). After preprocessing (removing first and
+    last 6 epochs), 78 data points available per trial: 13 target and 65 non-target epochs.'
+documentation:
+  acknowledgements: Experiments were performed according to the Declaration of Helsinki.
+  contact_info:
+  - jan.sosulski@blbt.uni-freiburg.de
+  - davhuebn@gmail.com
+  - kleinaa@cs.uni-freiburg.de
+  - michael.tangermann@donders.ru.nl
+  country: DE
+  data_url: https://freidok.uni-freiburg.de/data/154576
+  description: Auditory oddball ERP dataset from 13 healthy subjects. Two sinusoidal tones (target 1000 Hz, non-target 500
+    Hz) presented at various stimulus onset asynchronies (SOAs, 60-600 ms). 31-channel EEG recorded at 1000 Hz with BrainProducts
+    BrainAmp DC. Raw BrainVision format data.
+  doi: 10.48550/arXiv.2109.06011
+  ethics_approval:
+  - Approved by the ethics committee of the university medical center of Freiburg
+  funding:
+  - Cluster of Excellence BrainLinks-BrainTools funded by the German Research Foundation (DFG) [grant number EXC 1086]
+  - DFG project SuitAble [grant number TA 1258/1-1]
+  - state of Baden-Württemberg, Germany, through bwHPC and the German Research Foundation (DFG) [grant number INST 39/963-1
+    FUGG]
+  institution: University of Freiburg
+  investigators:
+  - Jan Sosulski
+  - David Hübner
+  - Aaron Klein
+  - Michael Tangermann
+  keywords:
+  - Bayesian optimization
+  - individual experimental parameters
+  - brain-computer interfaces
+  - learning from small data
+  - auditory event-related potentials
+  - closed-loop parameter optimization
+  license: CC-BY-SA-4.0
+  publication_year: 2021
+  repository: FreiDok
+  senior_author: Michael Tangermann
+experiment:
+  class_labels:
+  - Target
+  - NonTarget
+  events:
+    NonTarget: 1
+    Target: 21
+  instructions: Focus on the target tones (1000 Hz) and ignore the non-target tones (500 Hz). Refrain from blinking and movement
+    as much as possible.
+  mode: online
+  n_classes: 2
+  paradigm: p300
+  primary_modality: auditory
+  stimulus_modalities:
+  - auditory
+  stimulus_presentation:
+    distance_cm: '65'
+    non_target_tone_hz: '500'
+    target_tone_hz: '1000'
+    tone_duration_ms: '40'
+  stimulus_type: oddball
+  study_design: Subjects focused attention on target tones (1000 Hz) and ignored non-target tones (500 Hz) presented via speaker
+    at 65 cm distance. One trial consisted of 15 target and 75 non-target stimuli in pseudo-random order with at least two
+    non-target tones between target tones. The experiment was split into optimization and validation parts.
+  synchronicity: synchronous
+file_format: brainvision
+methodology: 'The experiment was divided into two parts: (1) Optimization part: four strategies (AUC-ucb, AUC-rand, P300-ucb,
+  P300-rand) each allocated 20 minutes to find optimal SOA. Strategies alternated to minimize non-stationarity effects. (2)
+  Validation part: evaluated SOAs from each optimization strategy plus fixed 60ms SOA using 20 trials each (in blocks of 5
+  trials). Features were mean amplitudes in 5 time intervals ([100, 170], [171, 230], [231, 300], [301, 410], [411, 500] ms)
+  across 31 channels (155 dimensions total). Classification used rLDA with automatic shrinkage regularization and 13-fold
+  cross-validation on single trials.'
+paradigm_specific:
+  detected_paradigm: p300
+  n_targets: 1
+participants:
+  age_max: 26
+  age_mean: 22.7
+  age_min: 20
+  age_std: 1.64
+  gender:
+    female: 8
+    male: 5
+  health_status: healthy
+  n_subjects: 13
+  species: human
+performance:
+  auc: 0.701
+  mean_auc_fixed60: 0.517
+  mean_auc_p300_rand: 0.681
+  mean_auc_p300_ucb: 0.67
+  mean_auc_rand: 0.704
+  mean_auc_ucb: 0.701
+runs_per_session: 1
+sessions_per_subject: 80
+signal_processing:
+  classifiers:
+  - rLDA
+  - Shrinkage LDA
+  feature_extraction:
+  - Mean amplitude in time intervals
+  frequency_bands:
+    analyzed_range:
+    - 1.5
+    - 40.0
+tags:
+  modality:
+  - Auditory
+  pathology:
+  - Healthy
+  type:
+  - Research
