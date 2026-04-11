@@ -45,5 +45,6 @@
     "auditory event-related potentials",
     "closed-loop parameter optimization"
   ],
-  "PublicationYear": 2021
+  "PublicationYear": 2021,
+  "Version": "1.0.1"
 }
