@@ -1,49 +1,49 @@
 {
-	"Name": "Sosulski2019",
-	"BIDSVersion": "1.9.0",
-	"HEDVersion": "8.4.0",
-	"DatasetType": "derivative",
-	"License": "CC-BY-SA-4.0",
-	"Authors": [
-		"Jan Sosulski",
-		"David H\u00fcbner",
-		"Aaron Klein",
-		"Michael Tangermann"
-	],
-	"Acknowledgements": "Experiments were performed according to the Declaration of Helsinki.",
-	"Funding": [
-		"Cluster of Excellence BrainLinks-BrainTools funded by the German Research Foundation (DFG) [grant number EXC 1086]",
-		"DFG project SuitAble [grant number TA 1258/1-1]",
-		"state of Baden-W\u00fcrttemberg, Germany, through bwHPC and the German Research Foundation (DFG) [grant number INST 39/963-1 FUGG]"
-	],
-	"EthicsApprovals": [
-		"Approved by the ethics committee of the university medical center of Freiburg"
-	],
-	"ReferencesAndLinks": [
-		"https://freidok.uni-freiburg.de/data/154576"
-	],
-	"DatasetDOI": "doi:10.48550/arXiv.2109.06011",
-	"GeneratedBy": [
-		{
-			"CodeURL": "https://github.com/NeuroTechX/moabb",
-			"Name": "moabb",
-			"Description": "Mother of All BCI Benchmarks",
-			"Version": "1.5.0"
-		}
-	],
-	"SourceDatasets": [
-		{
-			"DOI": "10.6094/UNIFR/154576",
-			"URL": "https://freidok.uni-freiburg.de/data/154576"
-		}
-	],
-	"Keywords": [
-		"Bayesian optimization",
-		"individual experimental parameters",
-		"brain-computer interfaces",
-		"learning from small data",
-		"auditory event-related potentials",
-		"closed-loop parameter optimization"
-	],
-	"PublicationYear": 2021
+  "Name": "Sosulski et al. 2019 — Auditory ERP EEG dataset",
+  "BIDSVersion": "1.9.0",
+  "HEDVersion": "8.4.0",
+  "DatasetType": "derivative",
+  "License": "CC-BY-SA-4.0",
+  "Authors": [
+    "Jan Sosulski",
+    "David Hübner",
+    "Aaron Klein",
+    "Michael Tangermann"
+  ],
+  "Acknowledgements": "Experiments were performed according to the Declaration of Helsinki.",
+  "Funding": [
+    "Cluster of Excellence BrainLinks-BrainTools funded by the German Research Foundation (DFG) [grant number EXC 1086]",
+    "DFG project SuitAble [grant number TA 1258/1-1]",
+    "state of Baden-Württemberg, Germany, through bwHPC and the German Research Foundation (DFG) [grant number INST 39/963-1 FUGG]"
+  ],
+  "EthicsApprovals": [
+    "Approved by the ethics committee of the university medical center of Freiburg"
+  ],
+  "ReferencesAndLinks": [
+    "https://freidok.uni-freiburg.de/data/154576"
+  ],
+  "DatasetDOI": "doi:10.48550/arXiv.2109.06011",
+  "GeneratedBy": [
+    {
+      "CodeURL": "https://github.com/NeuroTechX/moabb",
+      "Name": "moabb",
+      "Description": "Mother of All BCI Benchmarks",
+      "Version": "1.5.0"
+    }
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "10.6094/UNIFR/154576",
+      "URL": "https://freidok.uni-freiburg.de/data/154576"
+    }
+  ],
+  "Keywords": [
+    "Bayesian optimization",
+    "individual experimental parameters",
+    "brain-computer interfaces",
+    "learning from small data",
+    "auditory event-related potentials",
+    "closed-loop parameter optimization"
+  ],
+  "PublicationYear": 2021
 }
