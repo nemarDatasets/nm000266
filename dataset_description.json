@@ -1,5 +1,5 @@
 {
-  "Name": "Sosulski et al. 2019 — Auditory ERP EEG dataset",
+  "Name": "Sosulski et al. 2019 — Online Optimization of Stimulation Speed in an Auditory Brain-Computer Interface under Time Constraints",
   "BIDSVersion": "1.9.0",
   "HEDVersion": "8.4.0",
   "DatasetType": "derivative",
