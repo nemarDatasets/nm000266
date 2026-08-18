@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Sosulski et al. 2019 — Online Optimization of Stimulation Speed in an Auditory Brain-Computer Interface under Time Constraints",
-  "description": "An auditory event-related potential dataset from 13 healthy subjects performing an oddball paradigm with two sinusoidal tones (target 1000 Hz, non-target 500 Hz) presented at variable stimulus onset asynchronies (60-600 ms). The dataset comprises 31-channel EEG recordings at 1000 Hz acquired with BrainProducts BrainAmp DC during an online closed-loop brain-computer interface experiment designed to optimize stimulation parameters using Bayesian optimization and random search strategies.",
-  "methods_description": "EEG data were recorded from 13 healthy subjects (mean age 22.7 years) using a 31-channel BrainProducts BrainAmp DC system at 1000 Hz sampling rate with passive Ag/AgCl electrodes in a standard 10-20 montage, referenced to the nose. Subjects performed an auditory oddball task with target (1000 Hz) and non-target (500 Hz) tones presented via speaker at 65 cm distance. Each trial consisted of 90 stimuli (15 target, 75 non-target) in pseudo-random order. The experiment comprised an optimization phase (four strategies with 20-minute allocations) and a validation phase (20 trials per stimulus onset asynchrony). Classification used regularized linear discriminant analysis with mean amplitude features extracted from five time intervals (100-500 ms) across all channels.",
+  "description": "An auditory event-related potential dataset from 13 healthy subjects performing an oddball paradigm with two sinusoidal tones (target 1000 Hz, non-target 500 Hz) presented at variable stimulus onset asynchronies (60-600 ms). The dataset comprises 31-channel EEG recordings at 1000 Hz acquired with BrainProducts BrainAmp DC hardware, designed to evaluate Bayesian optimization and random search strategies for automated selection of individually optimal stimulation parameters in brain-computer interface applications.",
+  "methods_description": "EEG data were recorded from 13 healthy subjects (mean age 22.7 years) using 31 passive Ag/AgCl electrodes in a standard 10-20 montage with nose reference, sampled at 1000 Hz. Subjects performed an auditory oddball task with target (1000 Hz) and non-target (500 Hz) tones presented via speaker at 65 cm distance. Each trial consisted of 90 stimuli (15 target, 75 non-target) in pseudo-random order. The experiment comprised an optimization phase (four strategies with 20-minute allocations) and a validation phase (20 trials per stimulus onset asynchrony). Feature extraction used mean amplitudes in five time intervals (100-500 ms post-stimulus) across all channels, with classification performed using regularized linear discriminant analysis and 13-fold cross-validation.",
   "license": "CC-BY-SA-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -18,7 +18,9 @@
   },
   "keywords": [
     {
-      "term": "brain-computer interfaces"
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
     },
     {
       "term": "EEG"
@@ -30,6 +32,9 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
     },
     {
+      "term": "P300"
+    },
+    {
       "term": "auditory oddball paradigm"
     },
     {
@@ -37,9 +42,6 @@
     },
     {
       "term": "stimulus onset asynchrony"
-    },
-    {
-      "term": "closed-loop parameter optimization"
     }
   ],
   "related_identifiers": [
@@ -83,7 +85,7 @@
     {
       "funder_name": "DFG",
       "award_number": "TA 1258/1-1",
-      "award_title": "DFG project SuitAble"
+      "award_title": "SuitAble project"
     },
     {
       "funder_name": "DFG",
@@ -107,5 +109,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "191c45e8878f815c9f3b1488f2fb0dff2e65dbc8abdab6825359913d90e99835"
+  "source_hash": "ee980bd712bf22c12768d5a6d14259b36252de895baa62f9aea5181b2510ed93"
 }
