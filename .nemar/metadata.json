@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "validated",
+  "pipeline_stage": "enriched",
   "title": "Sosulski et al. 2019 — Online Optimization of Stimulation Speed in an Auditory Brain-Computer Interface under Time Constraints",
-  "description": "An auditory event-related potential dataset from 13 healthy subjects performing an oddball paradigm with two sinusoidal tones (target 1000 Hz, non-target 500 Hz) presented at variable stimulus onset asynchronies (60-600 ms). The dataset comprises 31-channel EEG recordings at 1000 Hz acquired with BrainProducts BrainAmp DC hardware, designed to evaluate Bayesian optimization and random search strategies for automated selection of individually optimal stimulation parameters in brain-computer interface applications.",
-  "methods_description": "EEG data were recorded from 13 healthy subjects (mean age 22.7 years) using 31 passive Ag/AgCl electrodes in a standard 10-20 montage with nose reference, sampled at 1000 Hz. Subjects performed an auditory oddball task with target (1000 Hz) and non-target (500 Hz) tones presented via speaker at 65 cm distance. Each trial consisted of 90 stimuli (15 target, 75 non-target) in pseudo-random order. The experiment comprised an optimization phase (four strategies with 20-minute allocations) and a validation phase (20 trials per stimulus onset asynchrony). Feature extraction used mean amplitudes in five time intervals (100-500 ms post-stimulus) across all channels, with classification performed using regularized linear discriminant analysis and 13-fold cross-validation.",
+  "description": "EEG recordings from 13 healthy participants performing an auditory oddball (P300) task with target (1000 Hz) and non-target (500 Hz) tones at varying stimulus onset asynchronies (60-600 ms). The dataset supports research on closed-loop Bayesian optimization of stimulation speed in an auditory brain-computer interface. Data were recorded with 31 EEG channels at 1000 Hz, in an optimization part and a validation part.",
+  "methods_description": "31-channel EEG (BrainProducts BrainAmp DC, passive Ag/AgCl, nose reference, 1000 Hz) was recorded during an auditory oddball paradigm. Each trial had 15 target and 75 non-target tones. The optimization part ran four SOA-selection strategies (AUC-ucb, AUC-rand, P300-ucb, P300-rand) for 20 minutes each. The validation part tested the selected SOAs plus a fixed 60 ms SOA with 20 trials each. Classification used shrinkage-regularized LDA on mean amplitudes in five time intervals, with 13-fold cross-validation.",
   "license": "CC-BY-SA-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -18,30 +18,31 @@
   },
   "keywords": [
     {
-      "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
-    },
-    {
       "term": "EEG"
     },
     {
-      "term": "Event-Related Potentials, P300",
-      "subject_scheme": "MeSH",
-      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
+      "term": "brain-computer interface"
     },
     {
       "term": "P300"
     },
     {
-      "term": "auditory oddball paradigm"
+      "term": "auditory event-related potentials"
     },
     {
       "term": "Bayesian optimization"
     },
     {
       "term": "stimulus onset asynchrony"
+    },
+    {
+      "term": "individual experimental parameters"
+    },
+    {
+      "term": "learning from small data"
+    },
+    {
+      "term": "closed-loop parameter optimization"
     }
   ],
   "related_identifiers": [
@@ -78,18 +79,19 @@
   ],
   "funding_references": [
     {
-      "funder_name": "DFG",
+      "funder_name": "German Research Foundation (DFG)",
       "award_number": "EXC 1086",
       "award_title": "Cluster of Excellence BrainLinks-BrainTools"
     },
     {
-      "funder_name": "DFG",
+      "funder_name": "German Research Foundation (DFG)",
       "award_number": "TA 1258/1-1",
-      "award_title": "SuitAble project"
+      "award_title": "SuitAble"
     },
     {
-      "funder_name": "DFG",
-      "award_number": "INST 39/963-1 FUGG"
+      "funder_name": "German Research Foundation (DFG)",
+      "award_number": "INST 39/963-1 FUGG",
+      "award_title": "bwHPC, state of Baden-Württemberg"
     }
   ],
   "resource_type_general": "Dataset",
@@ -98,7 +100,7 @@
     "eeg"
   ],
   "sizes": [
-    "3.9 GB (2121 files)"
+    "3.67 GB (2121 files)"
   ],
   "formats": [
     ".bdf",
