@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "Sosulski et al. 2019 — Online Optimization of Stimulation Speed in an Auditory Brain-Computer Interface under Time Constraints",
-  "description": "EEG recordings from 13 healthy participants performing an auditory oddball (P300) task with target (1000 Hz) and non-target (500 Hz) tones at varying stimulus onset asynchronies (60-600 ms). The dataset supports research on closed-loop Bayesian optimization of stimulation speed in an auditory brain-computer interface. Data were recorded with 31 EEG channels at 1000 Hz, in an optimization part and a validation part.",
-  "methods_description": "31-channel EEG (BrainProducts BrainAmp DC, passive Ag/AgCl, nose reference, 1000 Hz) was recorded during an auditory oddball paradigm. Each trial had 15 target and 75 non-target tones. The optimization part ran four SOA-selection strategies (AUC-ucb, AUC-rand, P300-ucb, P300-rand) for 20 minutes each. The validation part tested the selected SOAs plus a fixed 60 ms SOA with 20 trials each. Classification used shrinkage-regularized LDA on mean amplitudes in five time intervals, with 13-fold cross-validation.",
+  "description": "EEG recordings from 13 healthy participants performing an auditory oddball (P300) paradigm with 1000 Hz target and 500 Hz non-target tones at varying stimulus onset asynchronies (60-600 ms). The data were collected to evaluate closed-loop Bayesian optimization and random search for selecting individually optimal stimulation speed in an auditory brain-computer interface. The dataset contains an optimization part and a validation part, recorded with 31 EEG channels at 1000 Hz.",
+  "methods_description": "31-channel EEG recorded at 1000 Hz with a BrainProducts BrainAmp DC amplifier using passive Ag/AgCl electrodes and nose reference. Each trial had 15 target and 75 non-target tones. The optimization part used four strategies (AUC-ucb, AUC-rand, P300-ucb, P300-rand), each allotted 20 minutes. The validation part tested the selected SOAs and a fixed 60 ms SOA for 20 trials each. Features were mean amplitudes in 5 time intervals across channels, classified with shrinkage-regularized LDA and 13-fold cross-validation.",
   "license": "CC-BY-SA-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -21,7 +21,9 @@
       "term": "EEG"
     },
     {
-      "term": "brain-computer interface"
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
     },
     {
       "term": "P300"
@@ -34,15 +36,6 @@
     },
     {
       "term": "stimulus onset asynchrony"
-    },
-    {
-      "term": "individual experimental parameters"
-    },
-    {
-      "term": "learning from small data"
-    },
-    {
-      "term": "closed-loop parameter optimization"
     }
   ],
   "related_identifiers": [
@@ -111,5 +104,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "ee980bd712bf22c12768d5a6d14259b36252de895baa62f9aea5181b2510ed93"
+  "source_hash": "3dc985f17436ec75abbbbdd2b30063eadc61e73b09e75214a4e487400eaad8df"
 }
