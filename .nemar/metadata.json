@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "Sosulski et al. 2019 — Online Optimization of Stimulation Speed in an Auditory Brain-Computer Interface under Time Constraints",
-  "description": "EEG recordings from 13 healthy participants performing an auditory oddball (P300) task with target (1000 Hz) and non-target (500 Hz) tones at stimulus onset asynchronies between 60 and 600 ms. The study compared random search and Bayesian optimization for selecting each individual's best stimulation speed in a closed-loop auditory BCI. The protocol had an optimization part and a validation part, and the target measure was classification performance of a regularized LDA. The data are 31-channel EEG recorded at 1000 Hz.",
-  "methods_description": "31-channel EEG was recorded at 1000 Hz with a BrainProducts BrainAmp DC amplifier, using passive Ag/AgCl electrodes with a nose reference. Each trial presented 15 target and 75 non-target tones. In the optimization part, four strategies (AUC-ucb, AUC-rand, P300-ucb, P300-rand) each had 20 minutes to find the best SOA. In the validation part, the resulting SOAs and a fixed 60 ms SOA were each tested in 20 trials. Features were mean amplitudes in 5 time intervals across all channels, classified with shrinkage rLDA and 13-fold cross-validation.",
+  "description": "EEG recordings from 13 healthy participants performing an auditory oddball (P300) paradigm with target (1000 Hz) and non-target (500 Hz) tones at various stimulus onset asynchronies (60-600 ms). The data were collected to evaluate closed-loop optimization of stimulation speed, comparing random search and Bayesian optimization of the SOA to maximize regularized LDA classification performance. The dataset contains 31-channel EEG recorded at 1000 Hz, with an optimization part and a validation part.",
+  "methods_description": "31-channel EEG (BrainProducts BrainAmp DC, passive Ag/AgCl, nose reference, 1000 Hz) was recorded during an auditory oddball task. The optimization part ran four strategies (AUC-ucb, AUC-rand, P300-ucb, P300-rand) for 20 minutes each. The validation part tested the selected SOAs and a fixed 60 ms SOA over 20 trials each. Features were mean amplitudes in 5 time intervals across channels, classified with shrinkage rLDA using 13-fold cross-validation.",
   "license": "CC-BY-SA-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -26,10 +26,10 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
     },
     {
-      "term": "auditory event-related potentials"
+      "term": "P300"
     },
     {
-      "term": "P300"
+      "term": "auditory event-related potentials"
     },
     {
       "term": "Bayesian optimization"
@@ -83,7 +83,8 @@
     },
     {
       "funder_name": "German Research Foundation (DFG)",
-      "award_number": "INST 39/963-1 FUGG"
+      "award_number": "INST 39/963-1 FUGG",
+      "award_title": "bwHPC, state of Baden-Württemberg"
     }
   ],
   "resource_type_general": "Dataset",
@@ -103,5 +104,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "bbf2ae2fcd93766efa1593afa0f4f162e8ab60d93f6339640d7709359d570d34"
+  "source_hash": "a2b05eb57425ae0917ce6041c16d9036dfb8598d200ad8e071e28b84467316bc"
 }
