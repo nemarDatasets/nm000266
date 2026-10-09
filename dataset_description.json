@@ -20,7 +20,8 @@
     "Approved by the ethics committee of the university medical center of Freiburg"
   ],
   "ReferencesAndLinks": [
-    "https://freidok.uni-freiburg.de/data/154576"
+    "https://freidok.uni-freiburg.de/data/154576",
+    "doi:10.48550/arXiv.2109.06011"
   ],
   "DatasetDOI": "10.82901/nemar.nm000266",
   "GeneratedBy": [
@@ -35,9 +36,6 @@
     {
       "DOI": "10.6094/UNIFR/154576",
       "URL": "https://freidok.uni-freiburg.de/data/154576"
-    },
-    {
-      "DOI": "doi:10.48550/arXiv.2109.06011"
     }
   ],
   "Keywords": [
@@ -49,5 +47,5 @@
     "closed-loop parameter optimization"
   ],
   "PublicationYear": 2021,
-  "Version": "1.0.5"
+  "Version": "1.0.6"
 }
