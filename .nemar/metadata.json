@@ -47,7 +47,7 @@
     {
       "identifier": "10.48550/arXiv.2109.06011",
       "identifier_type": "DOI",
-      "relation_type": "IsDerivedFrom"
+      "relation_type": "IsDescribedBy"
     },
     {
       "identifier": "https://github.com/nemarDatasets/nm000266",
