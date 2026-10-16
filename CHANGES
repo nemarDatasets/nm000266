@@ -1,0 +1,7 @@
+1.0.8 2026-10-16
+  - sourcedata: added the .eeg and .vmrk named by each of the 1,060 deposited subjectN/*.vhdr
+    headers (2,120 files, 2,648,330,199 bytes), unchanged from the FreiDok release
+    10.6094/UNIFR/154576 (members of subjectN.zip inside the archive
+    freidok.uni-freiburg.de/dnb/download/154576, CRC-32 checked at both levels).
+    moabb.datasets.Sosulski2019 reads them next to each header. No existing file changed;
+    the BIDS tree is unchanged.
